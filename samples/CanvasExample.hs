@@ -32,7 +32,7 @@ setup window = do
                  (250, 300, 75, 15, "plum")]
     let drawRect (x,y,w,h,col) = do
           element canvas # set UI.fillStyle col
-          UI.fillRect x y w h canvas
+          UI.fillRect (x, y) w h canvas
 
     on UI.click addRects $ const $ forM_ rects drawRect
 
